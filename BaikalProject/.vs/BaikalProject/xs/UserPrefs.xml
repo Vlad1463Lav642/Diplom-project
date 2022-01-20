@@ -1,0 +1,49 @@
+﻿<Properties StartupConfiguration="{61CBBAA4-2784-45D0-B531-C942B9E77B3F}|Default">
+  <MonoDevelop.Ide.ItemProperties.BaikalProject.View PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BaikalProject.View/MathematicModelWindow.cs">
+    <Files>
+      <File FileName="BaikalProject.View/Program.cs" Line="1" Column="1" />
+      <File FileName="BaikalProject.BL/Database/Database.cs" Line="107" Column="35" />
+      <File FileName="BaikalProject.View/Properties/AssemblyInfo.cs" />
+      <File FileName="BaikalProject.BL/Properties/AssemblyInfo.cs" />
+      <File FileName="BaikalProject.BL/Controller/IDatabase.cs" />
+      <File FileName="BaikalProject.View/ErrorWindow.cs" />
+      <File FileName="BaikalProject.BL/Model/MathematicModel.cs" Line="26" Column="1" />
+      <File FileName="BaikalProject.BL/Controller/IMathematicModel.cs" Line="9" Column="55" />
+      <File FileName="BaikalProject.View/gtk-gui/BaikalProject.View.DatabaseWindow.cs" />
+      <File FileName="BaikalProject.View/InformationWindow.cs" />
+      <File FileName="BaikalProject.View/MathematicModelWindow.cs" Line="36" Column="10" />
+      <File FileName="BaikalProject.View/DatabaseWorkWindow.cs" Line="27" Column="33" />
+      <File FileName="BaikalProject.View/PointsWindow.cs" Line="59" Column="18" />
+      <File FileName="BaikalProject.BL/Other/HelperStorage.cs" />
+      <File FileName="BaikalProject.View/DatabaseWindow.cs" Line="1" Column="1" />
+      <File FileName="BaikalProject.View/MainWindow.cs" Line="1" Column="1" />
+      <File FileName="BaikalProject.BL/Controller/IHelperStorage.cs" />
+      <File FileName="BaikalProject.View/OptionsWindow.cs" Line="1" Column="1" />
+      <File FileName="BaikalProject.View/AboutWindow.cs" Line="12" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BaikalProject" expanded="True">
+            <Node name="BaikalProject.BL" expanded="True">
+              <Node name="Controller" expanded="True" />
+              <Node name="Database" expanded="True" />
+              <Node name="Model" expanded="True" />
+              <Node name="Other" expanded="True" />
+            </Node>
+            <Node name="BaikalProject.View" expanded="True">
+              <Node name="MathematicModelWindow.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
