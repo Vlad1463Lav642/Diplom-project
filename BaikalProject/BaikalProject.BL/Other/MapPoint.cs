@@ -1,20 +1,20 @@
 ﻿namespace BaikalProject.BL.Other
 {
     /// <summary>
-    /// Class for storage coordinates.
+    /// Класс для хранения координат.
     /// </summary>
     public class MapPoint
     {
-        #region Parametrs
+        #region Параметры
         public double x { get; set; }
         public double y { get; set; }
         #endregion
 
         /// <summary>
-        /// Set coordinate X and coordinate Y.
+        /// Установить координату X и координату Y.
         /// </summary>
-        /// <param name="X">coordinate X.</param>
-        /// <param name="Y">coordinate Y.</param>
+        /// <param name="X">Координата X.</param>
+        /// <param name="Y">Координата Y.</param>
         public MapPoint(double X, double Y)
         {
             x = X;

@@ -6,74 +6,74 @@ namespace BaikalProject.BL.Controller
     public interface IMathematicModel
     {
         /// <summary>
-        /// Get pollution into points polygon.
+        /// Получить матрицу загрязнений.
         /// </summary>
-        /// <param name="selectedProbPoints">List with selected probPoints.</param>
-        /// <returns>Matrix with pollutions into points.</returns>
+        /// <param name="selectedProbPoints">Список с выбранными точками проботбора.</param>
+        /// <returns>Матрица с загрязнениями.</returns>
         double[,] MathematicPoint(List<string> selectedProbPoints);
 
         /// <summary>
-        /// Set oils and elements into all probPoints.
+        /// Задать элементы в точках проботбора.
         /// </summary>
-        /// <param name="elements">Dictionary with oils and elements.</param>
+        /// <param name="elements">Словарь с элементами.</param>
         void SetOilsAndElements(Dictionary<string, double> elements);
 
         /// <summary>
-        /// Set distance from checked point to probPoint.
+        /// Задать дистанцию от выбранной точки поля до точки проботбора.
         /// </summary>
-        /// <param name="distance">Dictionary with distance.</param>
+        /// <param name="distance">Словарь с дистанциями.</param>
         void SetDistance(Dictionary<string, double[,]> genericDistanceDictionary);
 
         /// <summary>
-        /// Get matrix with all points from polygon. 
+        /// Получить матрицу со всеми точками поля.
         /// </summary>
-        /// <returns>Matrix with all points.</returns>
+        /// <returns>Матрица с точками.</returns>
         MapPoint[,] GetMatrixPoints();
 
         /// <summary>
-        /// Get pollution into season.
+        /// Получить загрязнение за сезон.
         /// </summary>
-        /// <param name="points">Matrix with pollution into points.</param>
-        /// <returns>Pollution into season.</returns>
+        /// <param name="points">Матрица с загрязнениями в точках.</param>
+        /// <returns>Загрязнение за сезон.</returns>
         double MathematicSeason(double[,] points);
 
         /// <summary>
-        /// Get pollution into year.
+        /// Получить загрязнение за год.
         /// </summary>
-        /// <param name="points">Pollution into season.</param>
-        /// <param name="T">Number of days.</param>
-        /// <returns>Pollution into year.</returns>
+        /// <param name="points">Загрязнение за сезон.</param>
+        /// <param name="T">Количество дней.</param>
+        /// <returns>Загрязнение за год.</returns>
         double MathematicYear(double points, int T);
 
         /// <summary>
-        /// Get X Coordinate of pollution polygon.
+        /// Получить X координату поля загрязнений.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>X координата.</returns>
         int GetMaxX();
 
         /// <summary>
-        /// Get Y Coordinate of pollution polygon.
+        /// Получить Y координату поля загрязнений.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Y координата.</returns>
         int GetMaxY();
 
         /// <summary>
-        /// Get pollution into current selected point.
+        /// Получить загрязнение в выбранной точке.
         /// </summary>
-        /// <param name="x">Coordinate X</param>
-        /// <param name="y">Coordinate Y</param>
-        /// <param name="selectedProbPoints">List with selected probPoints.</param>
-        /// <returns>Pollution into curent selected point.</returns>
+        /// <param name="x">Координата X.</param>
+        /// <param name="y">Координата Y.</param>
+        /// <param name="selectedProbPoints">Список с выбранными точками проботбора.</param>
+        /// <returns>Загрязнение в выбранной точке.</returns>
         double MathematicPoint(double x, double y, List<string> selectedProbPoints);
 
         /// <summary>
-        /// Get distance beetween two points.
+        /// Получить расстояние между двумя точками.
         /// </summary>
         /// <param name="lon1">Longtitude point 1.</param>
         /// <param name="lat1">Latitude point 1.</param>
         /// <param name="lon2">Longtitude point 2.</param>
         /// <param name="lat2">Latitude point 2.</param>
-        /// <returns>Distance between two points.</returns>
+        /// <returns>Расстояние между двумя точками.</returns>
         double DistanceBetweenPlaces(double lon1, double lat1, double lon2, double lat2);
     }
 }

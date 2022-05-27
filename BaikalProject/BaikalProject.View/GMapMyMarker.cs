@@ -7,7 +7,7 @@ namespace BaikalProject.View
 {
     class GMapMyMarker : GMarkerGoogle
     {
-        #region Parametrs
+        #region Параметры
         private Bitmap _image;
         #endregion
 

@@ -1,15 +1,15 @@
 ﻿namespace BaikalProject.BL.Controller
 {
     /// <summary>
-    /// Contains all needed information for working with interface.
+    /// Содержит всю необходимую информацию для работы с приложением.
     /// </summary>
     public interface IHelperStorage
     {
         /// <summary>
-        /// Get string information from data storage.
+        /// Получить информацию из хранилища данных.
         /// </summary>
-        /// <param name="key">Key string.</param>
-        /// <returns>Data information.</returns>
+        /// <param name="key">Ключ.</param>
+        /// <returns>Данные.</returns>
         string GetDataString(string key);
     }
 }

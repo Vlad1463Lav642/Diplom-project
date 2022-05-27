@@ -10,14 +10,14 @@ namespace BaikalProject.View
 {
     public partial class DatabaseWindow : MaterialForm
     {
-        #region Parametrs
+        #region Параметры
         private IDatabase database;
         private string tableName;
         private readonly MaterialSkin.MaterialSkinManager skinManager = null;
         #endregion
 
         /// <summary>
-        /// DatabaseWindow contains list of info from table of database.
+        /// DatabaseWindow содержит информацию из таблицы БД.
         /// </summary>
         public DatabaseWindow()
         {
@@ -53,7 +53,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Select table with combobox.
+        /// Выбор таблицы из выпадающего списка.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -64,7 +64,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Work with data from database.
+        /// Работа с данными из БД.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -99,7 +99,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Save Excel file with data.
+        /// Сохранить excel файл с данными.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -151,7 +151,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Open help window.
+        /// Открыть окно помощи.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

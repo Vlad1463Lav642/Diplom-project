@@ -6,79 +6,79 @@ namespace BaikalProject.BL.Controller
 {
 
     /// <summary>
-    /// Interface for working with database class.
+    /// Интерфейс для работы с классом database.
     /// </summary>
     public interface IDatabase
     {
         /// <summary>
-        /// Get or set number of all columns from current table. 
+        /// Получить количество столбцов в текущей таблице.
         /// </summary>
         int ColumsNumber { get; set; }
 
         /// <summary>
-        /// Get all names columns from current table.
+        /// Получить имена всех колонок из текущей таблицы.
         /// </summary>
-        /// <returns>string with names.</returns>
+        /// <returns>Строка с именами.</returns>
         List<string> GetColumnNames();
 
         /// <summary>
-        /// Get all data from table.
+        /// Получить все данные их таблицы.
         /// </summary>
-        /// <param name="tableName">Name of table.</param>
-        /// <returns>All data information from table.</returns>
+        /// <param name="tableName">Имя таблицы.</param>
+        /// <returns>Все данные из таблицы.</returns>
         DataTable GetAllDataFromTable(string tableName);
 
         /// <summary>
-        /// Insert information into table.
+        /// Вставить данные в таблицу.
         /// </summary>
-        /// <param name="tableName">Name of table.</param>
-        /// <param name="data">Insert data information.</param>
+        /// <param name="tableName">Имя таблицы.</param>
+        /// <param name="data">Данные.</param>
         void InsertIntoTable(string tableName, string data);
 
         /// <summary>
-        /// Delete information into table.
+        /// Удалить данные из таблицы.
         /// </summary>
-        /// <param name="tableName">Name of table.</param>
-        /// <param name="idName">Name of id column.</param>
-        /// <param name="data">ID number.</param>
+        /// <param name="tableName">Имя таблицы.</param>
+        /// <param name="idName">Наименование столбца ID.</param>
+        /// <param name="data">Номер ID.</param>
         void DeleteWithTable(string tableName, string idName, string data);
 
         /// <summary>
-        /// Update information into table.
+        /// Обновить данные в таблице.
         /// </summary>
-        /// <param name="tableName">Name of table.</param>
-        /// <param name="data">Update data information.</param>
+        /// <param name="tableName">Имя таблицы.</param>
+        /// <param name="data">Данные.</param>
         void UpdateInTable(string tableName, string data);
 
         /// <summary>
-        /// Get all numbers of positions from table "prob_Positions".
+        /// Получить все позиции из таблицы "prob_Positions".
         /// </summary>
-        /// <returns>List with numbers of positions.</returns>
+        /// <returns>Список с позициями.</returns>
         List<string> GetNumberPositions();
 
         /// <summary>
-        /// Get information about current table.
+        /// Получить информацию о данной таблице.
         /// </summary>
-        /// <param name="tableName">Name of table.</param>
+        /// <param name="tableName">Имя таблицы.</param>
         void GetInformationAboutTable(string tableName);
 
         /// <summary>
-        /// Get coordinates from table "coordinates".
+        /// Получить координаты из таблицы "coordinates".
         /// </summary>
-        /// <returns>Dictionary with coordinates.</returns>
+        /// <returns>Словарь с координатами.</returns>
         Dictionary<string, MapPoint> GetCoordinates();
 
         /// <summary>
-        /// Get list of elements.
+        /// Получить словарь с элементами.
         /// </summary>
-        /// <param name="element">Name of element.</param>
-        /// <returns>Dictionary with numberPositions and elements.</returns>
+        /// <param name="element">Имя элемента.</param>
+        /// <returns>Словарь с позициями и элементами.</returns>
         Dictionary<string, double> GetOilOrElements(string element);
 
         /// <summary>
-        /// Get a dictionary with data on the binding of points to a certain water area.
+        /// Получить словарь с данными о привязке точек к определенной акватории.
         /// </summary>
-        /// <returns>Dictionary with data.</returns>
+        /// <returns>Словарь с данными.</returns>
         Dictionary<string, int> GetPositionsOfAquatories();
     }
 }

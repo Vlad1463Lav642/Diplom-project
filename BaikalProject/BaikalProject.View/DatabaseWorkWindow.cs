@@ -10,7 +10,7 @@ namespace BaikalProject.View
 {
     public partial class DatabaseWorkWindow : MaterialForm
     {
-        #region Parametrs
+        #region Параметры
         private const int length = 25;
         private IDatabase database;
         private int X = 20;
@@ -26,7 +26,7 @@ namespace BaikalProject.View
         #endregion
 
         /// <summary>
-        /// Window for working with data from database.
+        /// Окно для работы с данными из БД.
         /// </summary>
         public DatabaseWorkWindow()
         {
@@ -39,7 +39,7 @@ namespace BaikalProject.View
             tableColumns = database.ColumsNumber;
             columnNames = database.GetColumnNames();
 
-            #region What button is clicked (Create elements in the window)
+            #region Проверка какая кнопка нажата (Создание элементов в окне.)
 
             switch (ButtonClickedName)
             {
@@ -65,9 +65,9 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Create Insert or Update elements.
+        /// Создание элементов для вставки или обновления данных в таблице.
         /// </summary>
-        /// <param name="number">Number of elements.</param>
+        /// <param name="number">Количество элементов.</param>
         private void CreateInsertUpdateElement(int number)
         {
             Y += length;
@@ -86,7 +86,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Create Delete elements.
+        /// Создание элементов для удаления.
         /// </summary>
         private void CreateDeleteElement()
         {
@@ -105,7 +105,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Save changes into database and close window.
+        /// Сохранить изменения в БД и закрыть окно.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -113,7 +113,7 @@ namespace BaikalProject.View
         {
             string result = "";
 
-            #region What button is clicked (send data to database class)
+            #region Проверка какая кнопка нажата (Отправка данных в класс database)
 
             switch (ButtonClickedName)
             {
@@ -177,7 +177,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Open help window.
+        /// Открыть окно помощи.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

@@ -10,11 +10,11 @@ using System.Data;
 namespace BaikalProject.BL.Database
 {
     /// <summary>
-    /// Work with database.
+    /// Работа с БД.
     /// </summary>
     public class Database : IDatabase
     {
-        #region Parametrs
+        #region Параметры
         private SqliteConnection connection;
         private string connectionString;
         public int ColumsNumber { get; set; }
@@ -22,7 +22,7 @@ namespace BaikalProject.BL.Database
         #endregion
 
         /// <summary>
-        /// Open connection with database.
+        /// Соединение с БД.
         /// </summary>
         public Database()
         {
@@ -38,18 +38,18 @@ namespace BaikalProject.BL.Database
         }
 
         /// <summary>
-        /// Get all names columns from current table.
+        /// Получить имена всех колонок из текущей таблицы.
         /// </summary>
-        /// <returns>List with names.</returns>
+        /// <returns>Строка с именами.</returns>
         public List<string> GetColumnNames()
         {
             return columnNames;
         }
 
         /// <summary>
-        /// Get information about current table.
+        /// Получить информацию о данной таблице.
         /// </summary>
-        /// <param name="tableName">Name of table.</param>
+        /// <param name="tableName">Имя таблицы.</param>
         public void GetInformationAboutTable(string tableName)
         {
             string query = @"SELECT * FROM  " + tableName;
@@ -75,9 +75,9 @@ namespace BaikalProject.BL.Database
         }
 
         /// <summary>
-        /// Get all numbers of positions from table "prob_Positions".
+        /// Получить все позиции из таблицы "prob_Positions".
         /// </summary>
-        /// <returns>List with numbers of positions.</returns>
+        /// <returns>Список с позициями.</returns>
         public List<string> GetNumberPositions()
         {
             string query = @"SELECT ID_prob_position, Number_Position FROM prob_Positions ORDER BY ID_prob_position";
@@ -99,9 +99,9 @@ namespace BaikalProject.BL.Database
         }
 
         /// <summary>
-        /// Get a dictionary with data on the binding of points to a certain water area.
+        /// Получить словарь с данными о привязке точек к определенной акватории.
         /// </summary>
-        /// <returns>Dictionary with data.</returns>
+        /// <returns>Словарь с данными.</returns>
         public Dictionary<string,int> GetPositionsOfAquatories()
         {
             Dictionary<string, string> aquatoriesWithID_coordinate = new Dictionary<string, string>();
@@ -141,9 +141,9 @@ namespace BaikalProject.BL.Database
         }
 
         /// <summary>
-        /// Get coordinates from table "coordinates".
+        /// Получить координаты из таблицы "coordinates".
         /// </summary>
-        /// <returns>Dictionary with coordinates.</returns>
+        /// <returns>Словарь с координатами.</returns>
         public Dictionary<string,MapPoint> GetCoordinates()
         {
             int i = 0;
@@ -182,10 +182,10 @@ namespace BaikalProject.BL.Database
         }
 
         /// <summary>
-        /// Get list of elements.
+        /// Получить словарь с элементами.
         /// </summary>
-        /// <param name="element">Name of element.</param>
-        /// <returns>Dictionary with numberPositions and elements.</returns>
+        /// <param name="element">Имя элемента.</param>
+        /// <returns>Словарь с позициями и элементами.</returns>
         public Dictionary<string, double> GetOilOrElements(string element)
         {
             string query = @"SELECT ID_oil, " + element + " FROM oil_Products_And_Elements ORDER BY ID_oil";
@@ -210,17 +210,17 @@ namespace BaikalProject.BL.Database
         }
 
         /// <summary>
-        /// Set all names colums into list.
+        /// Добавить имена столбцов в список.
         /// </summary>
-        /// <param name="reader">Current connection into database.</param>
-        /// <param name="number">Number of column.</param>
+        /// <param name="reader">Текущее подключение к БД.</param>
+        /// <param name="number">Номер столбца.</param>
         private void SetColumnNames(SqliteDataReader reader,int number)
         {
             columnNames.Add(reader.GetName(number));
         }
 
         /// <summary>
-        /// Open connection with database.
+        /// Открыть соединение с БД.
         /// </summary>
         private void OpenConnection()
         {
@@ -232,7 +232,7 @@ namespace BaikalProject.BL.Database
         }
 
         /// <summary>
-        /// Close connection with database.
+        /// Закрыть соединение с БД.
         /// </summary>
         private void CloseConnection()
         {
@@ -243,10 +243,10 @@ namespace BaikalProject.BL.Database
         }
 
         /// <summary>
-        /// Get all data from table.
+        /// Получить все данные их таблицы.
         /// </summary>
-        /// <param name="tableName">Name of table.</param>
-        /// <returns>All data information from table.</returns>
+        /// <param name="tableName">Имя таблицы.</param>
+        /// <returns>Все данные из таблицы.</returns>
         public DataTable GetAllDataFromTable(string tableName)
         {
             string query = @"SELECT * FROM " + tableName;
@@ -264,10 +264,10 @@ namespace BaikalProject.BL.Database
         }
 
         /// <summary>
-        /// Insert information into table.
+        /// Вставить данные в таблицу.
         /// </summary>
-        /// <param name="tableName">Name of table.</param>
-        /// <param name="data">Insert data information.</param>
+        /// <param name="tableName">Имя таблицы.</param>
+        /// <param name="data">Данные.</param>
         public void InsertIntoTable(string tableName,string data)
         {
             string[] result = data.Split('|');
@@ -301,11 +301,11 @@ namespace BaikalProject.BL.Database
         }
 
         /// <summary>
-        /// Delete information into table.
+        /// Удалить данные из таблицы.
         /// </summary>
-        /// <param name="tableName">Name of table.</param>
-        /// <param name="idName">Name of id column.</param>
-        /// <param name="data">ID number.</param>
+        /// <param name="tableName">Имя таблицы.</param>
+        /// <param name="idName">Наименование столбца ID.</param>
+        /// <param name="data">Номер ID.</param>
         public void DeleteWithTable(string tableName, string idName, string data)
         {
             string query = @"DELETE FROM " + tableName + " WHERE " + idName + " = " + data;
@@ -313,10 +313,10 @@ namespace BaikalProject.BL.Database
         }
 
         /// <summary>
-        /// Update information into table.
+        /// Обновить данные в таблице.
         /// </summary>
-        /// <param name="tableName">Name of table.</param>
-        /// <param name="data">Update data information.</param>
+        /// <param name="tableName">Имя таблицы.</param>
+        /// <param name="data">Данные.</param>
         public void UpdateInTable(string tableName, string data)
         {
             string[] result = data.Split('|');
@@ -341,7 +341,7 @@ namespace BaikalProject.BL.Database
         }
 
         /// <summary>
-        /// Send SQL message into database.
+        /// Отправить SQL запрос в БД.
         /// </summary>
         /// <param name="query">SQL message.</param>
         private void QueryToDatabase(string query)

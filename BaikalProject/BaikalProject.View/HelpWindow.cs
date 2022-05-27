@@ -4,7 +4,7 @@ namespace BaikalProject.View
 {
     public partial class HelpWindow : MaterialForm
     {
-        #region Parametrs
+        #region Параметры
         private static HelpWindow instance;
         private readonly MaterialSkin.MaterialSkinManager skinManager = null;
         #endregion
@@ -17,7 +17,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Check for singleton.
+        /// Проверка на существование. (Синглтон).
         /// </summary>
         /// <returns></returns>
         public static HelpWindow GetInstance()
@@ -30,7 +30,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Set information into label.
+        /// Установить информацию в label.
         /// </summary>
         /// <param name="text">Text data.</param>
         public void SetText(string text)

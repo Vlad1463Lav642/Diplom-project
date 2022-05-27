@@ -10,7 +10,7 @@ namespace BaikalProject.View
     public partial class PointsWindow : MaterialForm
     {
 
-        #region Parametrs
+        #region Параметры
         private Dictionary<string,int> numberPointsAndAquatories;
         private List<string> selectedPoints;
         public MathematicModelWindow currentMathematicModelWindow;
@@ -19,7 +19,7 @@ namespace BaikalProject.View
         #endregion
 
         /// <summary>
-        /// Window with points.
+        /// Окно с точками проботбора.
         /// </summary>
         public PointsWindow()
         {
@@ -39,9 +39,9 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Create CheckButton element.
+        /// Создать CheckButton элемент.
         /// </summary>
-        /// <param name="number">Number of elements.</param>
+        /// <param name="number">Количество элементов</param>
         private void CreatePointElement(string number)
         {
             switch (numberPointsAndAquatories[number])
@@ -59,7 +59,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Get List with selected points.
+        /// Получить список с выбранными точками.
         /// </summary>
         /// <param name="listBox">Aquatories list.</param>
         private void GetCheckedData(MaterialCheckedListBox listBox)
@@ -74,7 +74,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Set selected points into map and close window.
+        /// Отправка списка с выбранными точками в карту и закрытие окна.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -100,7 +100,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Open help window.
+        /// Открыть окно помощи.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

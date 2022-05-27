@@ -21,7 +21,7 @@ namespace BaikalProject.View
     public partial class MathematicModelWindow : MaterialForm
     {
 
-        #region Parametrs
+        #region Параметры
         private const double mapX = 53.6946273;
         private const double mapY = 106.9142586;
         private const int maxZoom = 10;
@@ -47,7 +47,7 @@ namespace BaikalProject.View
         #endregion
 
         /// <summary>
-        /// Window with map.
+        /// Окно с картой.
         /// </summary>
         public MathematicModelWindow()
         {
@@ -77,7 +77,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Open window with points.
+        /// Открыть окно с точками проботбора.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -91,7 +91,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Function for working with map.
+        /// Функция для работы с картой.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -112,12 +112,12 @@ namespace BaikalProject.View
             //Minimal zoom.
             map.MinZoom = minZoom;
 
-            //Mouse cursor in center of the map.
+            //Курсор мыши по центру карты.
             map.MouseWheelZoomType = MouseWheelZoomType.MousePositionWithoutCenter;
 
             map.IgnoreMarkerOnMouseWheel = true;
 
-            //Move while holding down the left mouse button.
+            //Движение при зажатии левой кнопки мыши.
             map.DragButton = MouseButtons.Left;
 
             map.NegativeMode = false;
@@ -134,17 +134,17 @@ namespace BaikalProject.View
             //Default zoom.
             map.Zoom = zoom;
 
-            //Hide cross in center of the map.
+            //Спрятать крестик по центру карты.
             map.ShowCenter = false;
 
             //Map provider.
             map.MapProvider = GMapProviders.ArcGIS_World_Topo_Map;
 
-            //Loading map from server or cache.
+            //Загружать карту с сервера или кэша.
             GMaps.Instance.Mode = AccessMode.ServerAndCache;
             map.CacheLocation = @"Cache";
 
-            //Coordinates for map.
+            //Координаты для карты.
             map.Position = new PointLatLng(mapX,mapY);
 
             map.Overlays.Clear();
@@ -152,7 +152,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Draw markers on map.
+        /// Отрисовка маркеров на карте.
         /// </summary>
         private void CreateProbMarkers()
         {
@@ -173,7 +173,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Select element in the database.
+        /// Выбрать элемент в БД.
         /// </summary>
         public void ElementUpdate()
         {
@@ -191,7 +191,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Draw pollution polygon.
+        /// Отрисовка поля загрязнений.
         /// </summary>
         /// <param name="selectedPoints">List with selected points.</param>
         public void DrawPolygon(List<string> selectedPoints)
@@ -231,7 +231,7 @@ namespace BaikalProject.View
             resultYear = model.MathematicYear(resultSeason, 90);
             #region pollutionPolygons
 
-            //Painting pollution polygon.
+            //Покраска поля загрязнений.
 
             Color darkRed = Color.FromArgb(60,139, 0, 0);
             Color red = Color.FromArgb(60,255, 0, 0);
@@ -368,7 +368,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Draw a marker where the right mouse button was pressed.
+        /// Нарисовать маркер в том месте где нажата правая кнопка мыши.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -393,7 +393,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Select element from combobox.
+        /// Выбрать элемент из выпадающего списка.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -404,7 +404,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Calculation of pollution at a point, per season and per year.
+        /// Расчет загрязнения в точке, за сезон и за год.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -428,7 +428,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Save screenshot of map.
+        /// Сохранить скриншот карты.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -458,7 +458,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Save Excel file with data.
+        /// Сохранить Excel файл с данными.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -504,7 +504,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Open help window.
+        /// Открыть окно помощи.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -519,7 +519,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Draw color markers.
+        /// Отрисовка цветных маркеров.
         /// </summary>
         private void ColorBoxes()
         {
@@ -534,7 +534,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Hide pollution polygon.
+        /// Скрыть поле загрязнений.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

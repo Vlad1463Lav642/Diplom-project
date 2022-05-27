@@ -5,11 +5,11 @@ namespace BaikalProject.BL.Other
 {
 
     /// <summary>
-    /// Contains all needed information for working with interface.
+    /// Содержит всю необходимую информацию для работы с приложением.
     /// </summary>
     public class HelperStorage : IHelperStorage
     {
-        #region Parametrs
+        #region Параметры
         private Dictionary<object, object> dataDict;
         #endregion
 
@@ -27,10 +27,10 @@ namespace BaikalProject.BL.Other
         }
 
         /// <summary>
-        /// Get string information from data storage.
+        /// Получить информацию из хранилища данных.
         /// </summary>
-        /// <param name="key">Key string.</param>
-        /// <returns>Data information.</returns>
+        /// <param name="key">Ключ.</param>
+        /// <returns>Данные.</returns>
         public string GetDataString(string key)
         {
             if (dataDict.ContainsKey(key))

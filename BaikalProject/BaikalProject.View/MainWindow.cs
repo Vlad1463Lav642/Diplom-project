@@ -8,14 +8,14 @@ namespace BaikalProject.View
 {
     public partial class MainWindow : MaterialForm
     {
-        #region Parametrs
+        #region Параметры
         private readonly MaterialSkin.MaterialSkinManager skinManager = null;
         public static bool helpSelected = true;
         public static bool themeSelected = false;
         #endregion
 
         /// <summary>
-        /// Main menu window.
+        /// Окно "Главное меню".
         /// </summary>
         public MainWindow()
         {
@@ -25,7 +25,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Open window for working with database.
+        /// Открыть окно для работы с БД.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -36,7 +36,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Open window for working with map.
+        /// Открыть окно для работы с картой.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -47,7 +47,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Close program.
+        /// Закрыть программу.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -57,7 +57,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Select theme of program.
+        /// Выбрать тему программы.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -68,10 +68,10 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Install selected theme.
+        /// Установить выбранную тему.
         /// </summary>
-        /// <param name="skin">MaterialSkinManager of current window.</param>
-        /// <param name="form">Current window.</param>
+        /// <param name="skin">MaterialSkinManager текущего окна.</param>
+        /// <param name="form">Текущее окно.</param>
         public static void themeSelector(MaterialSkin.MaterialSkinManager skin, MaterialForm form)
         {
             if (themeSelected == true)
@@ -93,7 +93,7 @@ namespace BaikalProject.View
         }
 
         /// <summary>
-        /// Open help window.
+        /// Открыть окно помощи.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
